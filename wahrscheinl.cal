@@ -1,20 +1,26 @@
 print 'READ factorial2.cal'
 read factorial2.cal
+
 print '\nOWN Functions'
+/**Binominalverteilung **/
 define C(n,k) = binomial(n,k)
 define Cvert(n,k,q) = C(n,k)*(q^k)*(1-q)^(n-k)
-define Cvertsum(n, n0,k,q)
+/* Summiert Binominalverteilungen von k0 bis k */
+define Cvertsum(n,k,k0,q)
 {
 	local sum = 0;
-	while(n>=n0)
+	while(k>=k0)
 	{
 		sum += Cvert(n,k,q);
-		n--;
+		k--;
 	}
 	return sum;
 }
 
+/** Hypergeometrische Verteilung **/
 define H(M, N, n, k) = C(M,k)*C(N-M,n-k)/C(N,n)
+
+/* Summiert hypergeometrische Verteilungen von k0 bis k */
 define Hsum(M,N,n,k,k0) 
 {
 	local sum = 0;
