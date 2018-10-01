@@ -6,7 +6,7 @@ print '\nOWN Functions'
 print "Binomialkoeffizient"
 define C(n,k) = binomial(n,k)
 print "Binomialverteilung"
-define Cvert(n,k,q) = C(n,k)*(q^k)*(1-q)^(n-k)
+define Cvert(n,k,p) = C(n,k)*(p^k)*(1-p)^(n-k)
 /* Summiert Binomialverteilungen von k0 bis k */
 print "Summe von Binomialverteilungen"
 define Cvertsum(n,k,k0,q)
