@@ -2,7 +2,7 @@ print ' READ factorial2.cal'
 read factorial2.cal
 
 print "\n OWN Functions"
-print " See Manual: https://github.com/LeiTi34/apcalc_script/blob/master/README.md\n"
+print " See Manual: https://github.com/LeiTi34/apcalc_script/blob/master/wiki/README.md\n"
 /** Binomialverteilung **/
 define C(n,k) = binomial(n,k)
 define Cvert(n,k,p) = C(n,k)*(p^k)*(1-p)^(n-k)
