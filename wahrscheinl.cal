@@ -1,14 +1,12 @@
-print 'READ factorial2.cal'
+print ' READ factorial2.cal'
 read factorial2.cal
 
-print '\nOWN Functions'
+print "\n OWN Functions"
+print " See Manual: https://github.com/LeiTi34/apcalc_script/blob/master/README.md\n"
 /** Binomialverteilung **/
-print "Binomialkoeffizient"
 define C(n,k) = binomial(n,k)
-print "Binomialverteilung"
 define Cvert(n,k,p) = C(n,k)*(p^k)*(1-p)^(n-k)
 /* Summiert Binomialverteilungen von k0 bis k */
-print "Summe von Binomialverteilungen"
 define Cvertsum(n,k,k0,q)
 {
 	local sum = 0;
@@ -21,11 +19,9 @@ define Cvertsum(n,k,k0,q)
 }
 
 /** Hypergeometrische Verteilung **/
-print "Hypergeometrische Verteilung"
 define H(M, N, n, k) = C(M,k)*C(N-M,n-k)/C(N,n)
 
 /* Summiert hypergeometrische Verteilungen von k0 bis k */
-print "Summe von Hypergeometrischen Verteilungen"
 define Hsum(M,N,n,k,k0) 
 {
 	local sum = 0;
